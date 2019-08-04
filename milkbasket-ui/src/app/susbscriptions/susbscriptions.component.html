@@ -1,0 +1,35 @@
+<div class="right">
+
+    <h2 class="headers-in-box">Few subscriptions you might be interested in</h2>
+    <div class="subscribe-suggestion">
+        <div class="product" *ngFor="let sub of subscriptionSuggestions">
+
+            <div id="product-image">
+                <img src="../../assets/{{start}}.jpeg" alt="milk" id="milk-img">
+            </div>
+
+
+            <div class=" product-details ">
+                <h3 class="left-padding "><strong>Product Id:</strong> {{sub}}</h3>
+                <h4 *ngIf="discounts[i]>0" class="left-padding"> <strong>Discount:</strong> {{discounts[i]}}%</h4>
+                <button class="subsctibe-button">  Subscribe</button>
+            </div>
+
+        </div>
+    </div>
+    <h2 class="headers-in-box">Your subscriptions</h2>
+    <div class="subscribed-products">
+        <div class="product" *ngFor="let sub of alreadySubscribed">
+            <div id="product-image">
+                <img src=".../../assets/{{start}}.jpeg" alt="milk" id="milk-img">
+            </div>
+
+            <div class="product-details">
+                <h3 class="left-padding"><strong>Product Id: </strong>{{sub}}</h3>
+                <button class="subsctibe-button">Unsubscribe</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,86 @@
+.btnc {
+    border: none;
+    margin: 0;
+    background: #404040;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    width: 200px;
+    letter-spacing: 3px;
+}
+
+.form-helper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form-c {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.typeahead-box {}
+
+#customerId {
+    width: 500px;
+    height: 60px;
+    margin-right: 1%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #404040;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.helper {
+    position: absolute;
+    background-image: url("../../../assets/wallpaper.jpg");
+    opacity: 0.7;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#item {
+    width: 497px;
+    height: 40px;
+    /* margin-right: 1%; */
+    outline: none;
+    border: 1px solid #404040;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0 auto;
+    margin-left: 675px;
+    cursor: pointer;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    /* font-weight: 100; */
+}
+
+.btnc:hover {
+    font-weight: 110;
+    font-size: 18px;
+    transition: font-size 0.3s ease;
+}
+
+.disable {
+    cursor: not-allowed;
+}

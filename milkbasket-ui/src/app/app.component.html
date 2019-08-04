@@ -1,0 +1,50 @@
+<div *ngIf="authenticated">
+    <div class="cross" *ngIf='feedbackac'>
+        <i class="fas fa-times" (click)='wafeeder()' style="color:white;"></i>
+    </div>
+    <div class="form-parent" *ngIf='feedbackac'>
+
+        <form class="feedback">
+            <input type="text" name="Name" id="Name" placeholder="Name">
+            <input type="email" name="Email" id="Email" placeholder="Email">
+            <input type="text" name="work" id="work" placeholder="Help us improve">
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+    <div class="fixedsidebar">
+        <div class="icons">
+            <a><i class="fas fa-align-center mega" (click)='acfeeder()'></i></a>
+        </div>
+
+    </div>
+
+    <div class="searchbar">
+        <strong><p class="typeahead">Welcome : {{custid}}</p></strong>
+        <!-- <input type="text" class="typeahead" placeholder="Search a city" [(ngModel)]='keyword' (keyup)="typeahead()"> -->
+    </div>
+
+
+
+
+    <div class="parent">
+
+        <div class="left">
+            <ul>
+                <li> <a [routerLink]="[ '/subscriptions' ]" (click)='refresh()'>SUBSCRIPTIONS</a></li>
+                <li> <a [routerLink]="[ '/recommendations' ]" (click)='refresh()'>RECOMMENDATIONS</a></li>
+                <li><a [routerLink]="[ '/insights' ]" (click)='refresh()'>INSIGHTS</a></li>
+                <li><a (click)='signout()'>SIGN OUT</a></li>
+            </ul>
+        </div>
+
+        <div class="apps">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+<div *ngIf='!authenticated' style="position: relative;z-index:2">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- <div class="vizContainer"></div> -->

@@ -1,0 +1,14 @@
+<div class="helper"></div>
+<div class="login-page">
+    <div class="form-helper">
+        <div class="form-c">
+            <input type="text" name="customerId" id="customerId" (input)="filterItems($event.target.value)" [(ngModel)]="customerId" />
+            <button class="btnc" type="submit" [ngClass]="{'disable': customerId.length==0}" (click)='logMeIn()'><a [routerLink]="[ '/subscriptions' ]" [ngClass]="{'disable': customerId.length==0}">LOGIN</a> </button>
+        </div>
+        <div class="typeahead-box">
+            <div *ngFor="let item of renderItems" id="item" (click)='setCustomerId(item);clearBox()'>
+                {{ item }}
+            </div>
+        </div>
+    </div>
+</div>
